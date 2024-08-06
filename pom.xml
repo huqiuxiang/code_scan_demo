@@ -32,9 +32,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
-            <version>1.4.0</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <scope>2.8.0</scope>
         </dependency>
 
         <dependency>
