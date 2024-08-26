@@ -43,6 +43,14 @@
             <scope>2.8.0</scope>
         </dependency>
 
+         <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+         <dependency>
+             <groupId>cn.hutool</groupId>
+             <artifactId>hutool-all</artifactId>
+             <version>4.6.1</version>
+         </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
