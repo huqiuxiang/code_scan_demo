@@ -1,4 +1,4 @@
-name: Alipay Cloud Devops Codescan
+name: ssh connect
 on:
   push:
       branches: [ main ]
@@ -17,4 +17,5 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
           ls -a
       - name: ssh
+        run: |
           ssh root@47.243.86.137
