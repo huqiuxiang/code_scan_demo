@@ -10,4 +10,11 @@ jobs:
     steps:
       - name: ssh connect
         run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "47.243.86.137 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOX3WFD3T3IQijKLyLs4qe8J4OEll+b2o7xoE6ps+3H" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
           ls -a
+      - name: ssh
+          ssh root@47.243.86.137
