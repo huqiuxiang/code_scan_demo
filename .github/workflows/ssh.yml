@@ -8,7 +8,7 @@ jobs:
   ssh:   # 安全扫描
     runs-on: ubuntu-latest
     steps:
-      - name: ssh connect
+      - name: ssh config
         run: |
           mkdir -p ~/.ssh
           echo "47.243.86.137 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOX3WFD3T3IQijKLyLs4qe8J4OEll+b2o7xoE6ps+3H" >> ~/.ssh/known_hosts
