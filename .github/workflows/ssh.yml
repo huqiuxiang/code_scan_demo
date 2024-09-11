@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: ssh config
         id: action-ssh
-        uses: tiyee/action-ssh@release
+        uses: tiyee/action-ssh@main
         with:
           host: 47.243.86.137 
           port: 22 
