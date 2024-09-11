@@ -10,8 +10,8 @@ jobs:
         id: action-ssh
         uses: tiyee/action-ssh@main
         with:
-          host: 140.205.117.80
+          host: 47.243.86.137
           port: 22 
-          username: hu 
+          username: root 
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           command: 'ls -alh'
