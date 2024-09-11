@@ -9,15 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ssh config
-        run: |
-          mkdir -p ~/.ssh
-          echo "47.243.86.137 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOX3WFD3T3IQijKLyLs4qe8J4OEll+b2o7xoE6ps+3H" >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
-      - name: ssh
-        run: |
-          ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no root@47.243.86.137 'cd /home/admin/send_email && ls -a'
-
-      - name: Cleanup
-        if: always()
-        run: |
-          rm -rf ~/.ssh
+        id: action-ssh
+        uses: tiyee/action-ssh@release
+        with:
+          host: 47.243.86.137 
+          port: 22 
+          username: root 
+          privateKey:  SofaOss2021
+          command: 'ls -alh'
