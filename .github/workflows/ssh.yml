@@ -1,4 +1,4 @@
-name: ssh
+name: ssh c
 on:
   push:
       branches: [ main ]
