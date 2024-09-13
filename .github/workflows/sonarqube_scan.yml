@@ -1,4 +1,4 @@
-name: sonarqube scan
+name: sonarqube scan test
 on:
   push:
       branches: [ main ]
