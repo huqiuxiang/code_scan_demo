@@ -17,4 +17,4 @@ jobs:
 
     # 如果是Maven
     - name: Build and analyze with Maven
-      run: mvn clean verify sonar:sonar -Dsonar.projectKey=my_scan_demo -Dsonar.host.url=http://47.243.86.137:9000 -Dsonar.login=sqa_86e9cac4c44ae9a8ca2176a0c7e2e1422067a3f4
+      run: mvn clean verify sonar:sonar -Dsonar.projectKey=my_scan_demo -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }} -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
