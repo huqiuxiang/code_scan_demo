@@ -1,0 +1,20 @@
+name: sonarqube scan
+on:
+  push:
+      branches: [ main ]
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+
+    # 如果是Maven
+    - name: Build and analyze with Maven
+      run: mvn clean verify sonar:sonar -Dsonar.projectKey=my_scan_demo -Dsonar.host.url=http://47.243.86.137 -Dsonar.login=sqa_86e9cac4c44ae9a8ca2176a0c7e2e1422067a3f4
