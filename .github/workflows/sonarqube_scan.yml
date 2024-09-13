@@ -6,8 +6,8 @@ jobs:
   run-sonarqube:
     runs-on: ubuntu-latest
     steps:
-    - name: SonarQube Scan
     - uses: monstar-lab-oss/sonarqube-github-action@v1.0.1
+    - name: SonarQube Scan
       with:
         url: ${{ secrets.SONARQUBE_HOST }}
         token: ${{ secrets.SONARQUBE_TOKEN }}
