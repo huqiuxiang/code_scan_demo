@@ -30,7 +30,6 @@
         <java.version>8</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
